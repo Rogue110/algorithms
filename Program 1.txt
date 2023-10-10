@@ -1,0 +1,93 @@
+Program 1:
+
+#include<stdio.h>#include<time.h>
+
+#include<stdlib.h>#define max 100000
+
+void exch(int *p,int *q)
+
+int temp p; p ="q iq temp:
+
+void quicksort(int a[], int low,int high)
+
+int : i ,j,k cy,k;
+
+if(low-high)
+
+return;key-low;
+
+i=| ow + 1 ;
+
+j-high;while(i<=j)
+
+a[i] <= a[key] )Ie( a[i] *
+
+i = i + 1
+
+while(a[i]>a[key])
+
+j = j - 1if(i < j)
+
+exch(&a[i],&a[j]);
+
+}
+
+exch(&a[j],&a[key]);
+
+quicksort (a, lo*w_{i}*j - 1)
+
+quicksort(aj+high);
+
+1
+
+int main()
+
+int ny[max];
+
+int i;
+
+long counter;
+
+float seconds;clock I start, finish;
+
+printf("Enter the no of elements to be sorted\n");scanf("%d", &n),
+
+for(i=1;i<n;i++)
+
+1
+
+yli) rand()%100;printf("%d".y[i]);
+
+Start-clock();
+
+counter 0;
+
+while(clock()-star<1000000)
+
+counter++ quicksort(y,1,n);
+
+finish clock();
+
+seconds (finish-start)/CLOCKS_PER_SEC; printf("The sorted elements:\n");
+
+for(i=1;i<=n;i++)
+
+printf("%d", y[i]);
+
+printf("\n best case and average case Time complexity=%f", (float)seconds/counter);
+
+start-clock(); counter=0;
+
+}
+
+//worst case Time complexity
+
+while(clock()-start<10000000)
+
+counter++;
+
+quicksort(y,1,n);
+
+finish clock();
+
+seconds (finish-start)/CLOCKS PER SEC; printf("n worst case Time complexity=%f", (float)seconds/counter);

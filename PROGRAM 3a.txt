@@ -1,0 +1,61 @@
+PROGRAM 3a:
+
+Source Code:
+
+#include<stdio.h>
+
+int parent[10],[10][3],[10][10];
+
+int find(int v)
+
+while(parent[v])v = parent[v];
+
+return v
+
+void union 1 (int i,int j)
+
+(
+
+parent[j] = i;}
+
+void kruskal(int n)
+
+int k.i.j.u.v.min,r,c,sum=0;for(k-1;k<n;k++)
+
+min = 999;for(i=1 ; i < n ;i++)for(j=1;j<=n;j++)
+
+if(i = j) continue;if(a[i][j] < min)
+
+u = find(i).
+
+v-find(j):if(u! = v)
+
+r = i, c = j, min = a[i][j]
+
+union I (r.find(c));
+
+t[k][1]=r;
+
+t[k][2] = c; sum += min;
+
+}
+
+printf("\nCost of Spanning Tree = %d",sum); printf("\nEdges of Spanning Tree\n"); for(i=1;i<n;i++)
+
+printf("%d %d\n",t[i][1],t[i][2]);
+
+3
+
+int main()
+
+int i,j,n; printf("\nEnter the number of vertices: "); scanf("%d",&n);
+
+printf("\nEnter the Adjacency Matrix(999 for NoEdge)\n");
+
+for(i=1;i<=n;i++) for(j=1;j<=nj++)
+
+scanf("%d",&a[i][j]);
+
+kruskal(n);
+
+return 0;

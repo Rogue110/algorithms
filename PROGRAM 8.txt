@@ -1,0 +1,61 @@
+PROGRAM 8:
+
+Source Code:
+
+#include<stdio.h>
+
+void dfs(int n,int a[10][10] , int source,int s [])
+
+{
+
+int i;
+
+s [source] = 1
+
+for i = 1; i <= n ;i++)
+
+if(a[source][i]=1 && s[i]==0)
+
+}
+
+dfs(n,a,i,s);
+
+int main()
+
+{
+
+int i,j,source,s[10];
+
+int n, a[10][10]
+
+int count=0;
+
+printf("\nEnter the number of nodes: ");
+
+scanf("%d", &n);
+
+printf("\nEnter the paths \n");for(i=1;i<=n;i++)
+
+for(j=1;j<=n;j++)
+
+scanf("%d",&a[i][j]);
+
+printf("\nEnter the source vertex :");scanf("%d",&source);
+
+for(i=1;i<=n;i++)
+
+s[i] = 0
+
+dfs(n,a,source,s);for(i=1;i<=n;i++)
+
+if(s[i])
+
+if(count=n)
+
+count=count+1;
+
+printf("\nThe graph is connected.");
+
+else
+
+printf("\nThe graph is not connected."); printf("\n");
