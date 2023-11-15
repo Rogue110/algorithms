@@ -1,67 +1,65 @@
-PROGRAM 2:
+Merge sort
 
-Source Code:
-
-#include<stdio.h>
-
+[#include<stdio.h>
 #include<time.h>
-
-#include<stdlib.h>#define max 100000
-
-void merge(int c[],int d[],int l,int m.int r)
-
-uti = l, j = m + 1, k = l
-
-int q
-
-while((im)&&(j<=r))if(c[i] <= c[j])
-
-d [k++]=c[i++];elsed[k + t] =c[i++]:if(i > m)for(q-q-q++)d[k++]= c[q] ;elsefor(q-iq m:q++)
-
-d[k++]= c[q] ;
-
-void mergesort(int a[], int left,int right)
-
-int b[right], i:
-
-f(left < night)
-
+#include<stdlib.h>
+#define max 100000
+void merge(int c[],int d[],int l,int m,int r)
+{
+int i=l,j=m+1,k=l;
+int q;
+while((i<=m)&&(j<=r))
+if(c[i]<=c[j])
+d[k++]=c[i++];
+else
+d[k++]=c[j++];
+if(i>m)
+for(q=j;q<=r;q++)
+d[k++]=c[q];
+else
+for(q=i;q<=m;q++)
+d[k++]=c[q];
+}
+void mergesort(int a[],int left,int right)
+{
+int b[right], i;
+if(left<right)
+{
 int mid=(left+right)/2;
-
-mergesort(a,left,mid);mergesort(a,mid+1.right);merge(a,b,left,mid,right);for(i=left;i<=right:i++)a[i] = b[i]
-
+mergesort(a,left,mid);
+mergesort(a,mid+1,right);
+merge(a,b,left,mid,right);
+for(i=left;i<=right;i++)
+a[i]=b[i];
+}
+}
 void main()
-
-int n.y[max] right, left;
-
-int i,pos
-
-long counter,float seconds;
-
-clock_t start, finish;
-
-printf("Enter the no of elements to be sorted \n"); scanf("%d",&n);
-
+{
+int n,y[max],right,left;
+int i,pos;
+long counter;
+float seconds;
+Dept. of CSE, GAT 17 DAA LAB-21CSEL49
+clock_t start,finish;
+printf("Enter the no of elements to be sorted\n");
+scanf("%d",&n);
 for(i=1;i<=n;i++)
-
-y[i]-rand()%100; printf("%d ",y[i]);
-
-start-clock();
-
-counter 0;left-1;right-n; while(clock()-start<1000000)
-
+{
+y[i]=rand()%100;
+printf("%d ",y[i]);
+}
+start=clock();
+counter=0;left=1;right=n;
+while(clock()-start<1000000)
+{
 counter++;
-
-mergesort(y,left, right);
-
-finish-clock();
-
-seconds (finish-start)CLOCKS_PER_SEC;
-
-printf("n The sorted elements: \n");
-
+mergesort(y,left,right);
+}
+finish=clock();
+seconds=(finish-start)/CLOCKS_PER_SEC;
+printf("\n The sorted elements:\n");
 for(i=1;i<=n;i++)
+printf("%d ", y[i]);
+printf("\n\Time complexity = %f", (float)seconds/counter);
+}]
 
-printf("%d", y[i]);
-
-printf("\n\Time complexity=%f", (float)seconds/counter);
